@@ -1,4 +1,4 @@
-<h1 align = "center">*Beverage Belt* Patch History</h1>
+<h1 align = "center">Beverage Belt Patch History</h1>
 
 <p align = "center">Jacob Sauer</p>
 
