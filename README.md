@@ -115,3 +115,17 @@ Frenzy Mode:
 - The spawn delay time was decreased to 0.9 seconds.
 - The sound effect corresponding to an error was removed, as the sheer frequency at which errors are expected to occur would likely cause the sound effect to decrease enjoyment.
 - The angular velocity of the conveyor belt components was increased by 10%.
+
+___
+
+## Version 0.4.0 (June 1st)
+
+General Changes:
+- Free Play Mode was renamed to Training Mode.
+- The material applied to the user's virtual hands was altered in order to be more easily distinguishable from the metallic colour of the desk.
+
+Classic Mode:
+- The scoring system was altered from a constant point-based structure to a varying money-based structure. Instead of receiving one point per successful disposal regardless of the item, the player now earns 5 cents for beer bottles, 10 cents for cans and clear plastic bottles, 20 cents for coloured plastic bottles, and 25 cents for milk cartons. In a future build, a currency system that enables the player to buy powerups based on money earned from this game mode will be implemented.
+
+Survival Mode:
+- The scoring system was altered from a constant point-based structure to a varying money-based structure. Instead of receiving one point per successful disposal regardless of the item, the player now earns 5 cents for beer bottles, 10 cents for cans and clear plastic bottles, 20 cents for coloured plastic bottles, and 25 cents for milk cartons. In a future build, a currency system that enables the player to buy powerups based on money earned from this game mode will be implemented.
