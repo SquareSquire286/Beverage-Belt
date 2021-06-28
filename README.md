@@ -118,7 +118,7 @@ Frenzy Mode:
 
 ___
 
-## Version 0.4.0 (June 1st)
+## Version 0.5.0 (June 1st)
 
 General Changes:
 - Free Play Mode was renamed to Training Mode.
