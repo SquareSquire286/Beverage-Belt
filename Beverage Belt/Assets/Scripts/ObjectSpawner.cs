@@ -135,6 +135,7 @@ public class ObjectSpawner : MonoBehaviour
             thisCan.GetComponent<DefaultMaterial>().SetMaterial(canMaterials[index]);
             thisCan.transform.GetChild(1).gameObject.GetComponent<DefaultMaterial>().SetMaterial(thisCan.transform.GetChild(1).gameObject.GetComponent<Renderer>().material);
             thisCan.GetComponent<GrabbableObject>().SetObjectID(2);
+            thisCan.GetComponent<GrabbableObject>().SetPointValue(10);
 
             beverageList.Add(thisCan);
         }
@@ -145,6 +146,7 @@ public class ObjectSpawner : MonoBehaviour
             thisCan.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = canMaterials[index];
             thisCan.GetComponent<DefaultMaterial>().SetMaterial(canMaterials[index]);
             thisCan.GetComponent<GrabbableObject>().SetObjectID(2);
+            thisCan.GetComponent<GrabbableObject>().SetPointValue(10);
 
             beverageList.Add(thisCan);
         }
@@ -155,6 +157,7 @@ public class ObjectSpawner : MonoBehaviour
         GameObject thisCarton = Instantiate(abstractCarton, transform.position, transform.rotation);
         thisCarton.GetComponent<DefaultMaterial>().SetMaterial(thisCarton.transform.GetChild(0).gameObject.GetComponent<Renderer>().material);
         thisCarton.GetComponent<GrabbableObject>().SetObjectID(3);
+        thisCarton.GetComponent<GrabbableObject>().SetPointValue(25);
 
         beverageList.Add(thisCarton);
     }
@@ -164,6 +167,7 @@ public class ObjectSpawner : MonoBehaviour
         GameObject thisBooze = Instantiate(abstractBeerBottle, transform.position, transform.rotation);
         thisBooze.GetComponent<DefaultMaterial>().SetMaterial(thisBooze.transform.GetChild(0).gameObject.GetComponent<Renderer>().material);
         thisBooze.GetComponent<GrabbableObject>().SetObjectID(4);
+        thisBooze.GetComponent<GrabbableObject>().SetPointValue(5);
 
         beverageList.Add(thisBooze);
     }
@@ -177,9 +181,16 @@ public class ObjectSpawner : MonoBehaviour
             thisBottle.GetComponent<DefaultMaterial>().SetMaterial(bottleMaterials[index1]);
 
             if (index1 == 0)
+            {
                 thisBottle.GetComponent<GrabbableObject>().SetObjectID(index1);
+                thisBottle.GetComponent<GrabbableObject>().SetPointValue(10);
+            }
 
-            else thisBottle.GetComponent<GrabbableObject>().SetObjectID(1);
+            else
+            {
+                thisBottle.GetComponent<GrabbableObject>().SetObjectID(1);
+                thisBottle.GetComponent<GrabbableObject>().SetPointValue(20);
+            }
 
             beverageList.Add(thisBottle);
         }
@@ -189,7 +200,6 @@ public class ObjectSpawner : MonoBehaviour
             GameObject thisBottle = Instantiate(abstractBottle, transform.position, transform.rotation);
             thisBottle.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = bottleMaterials[index1];
             thisBottle.GetComponent<DefaultMaterial>().SetMaterial(bottleMaterials[index1]);
-            thisBottle.GetComponent<GrabbableObject>().SetObjectID(index1);
 
             if (index1 == 3) // indicating a red bottle, which MUST be matched with a red lid
             {
@@ -197,6 +207,7 @@ public class ObjectSpawner : MonoBehaviour
                 thisBottle.transform.GetChild(3).gameObject.GetComponent<Renderer>().material = capMaterials[3];
                 thisBottle.transform.GetChild(2).gameObject.GetComponent<DefaultMaterial>().SetMaterial(capMaterials[3]);
                 thisBottle.GetComponent<GrabbableObject>().SetObjectID(1);
+                thisBottle.GetComponent<GrabbableObject>().SetPointValue(20);
 
                 beverageList.Add(thisBottle);
             }
@@ -207,6 +218,7 @@ public class ObjectSpawner : MonoBehaviour
                 thisBottle.transform.GetChild(3).gameObject.GetComponent<Renderer>().material = capMaterials[2];
                 thisBottle.transform.GetChild(2).gameObject.GetComponent<DefaultMaterial>().SetMaterial(capMaterials[2]);
                 thisBottle.GetComponent<GrabbableObject>().SetObjectID(1);
+                thisBottle.GetComponent<GrabbableObject>().SetPointValue(20);
 
                 beverageList.Add(thisBottle);
             }
@@ -217,6 +229,7 @@ public class ObjectSpawner : MonoBehaviour
                 thisBottle.transform.GetChild(3).gameObject.GetComponent<Renderer>().material = capMaterials[1];
                 thisBottle.transform.GetChild(2).gameObject.GetComponent<DefaultMaterial>().SetMaterial(capMaterials[1]);
                 thisBottle.GetComponent<GrabbableObject>().SetObjectID(1);
+                thisBottle.GetComponent<GrabbableObject>().SetPointValue(20);
 
                 beverageList.Add(thisBottle);
             }
@@ -227,6 +240,7 @@ public class ObjectSpawner : MonoBehaviour
                 thisBottle.transform.GetChild(3).gameObject.GetComponent<Renderer>().material = capMaterials[index2];
                 thisBottle.transform.GetChild(2).gameObject.GetComponent<DefaultMaterial>().SetMaterial(capMaterials[index2]);
                 thisBottle.GetComponent<GrabbableObject>().SetObjectID(0);
+                thisBottle.GetComponent<GrabbableObject>().SetPointValue(10);
 
                 beverageList.Add(thisBottle);
             }

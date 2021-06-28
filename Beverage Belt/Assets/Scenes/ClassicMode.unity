@@ -4150,7 +4150,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -223, y: -5.999996}
+  m_AnchoredPosition: {x: -242, y: -5.999996}
   m_SizeDelta: {x: 900, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &492276614
@@ -4244,8 +4244,7 @@ MonoBehaviour:
   otherHand: {fileID: 1609998911}
   grabHighlight: {fileID: 2100000, guid: a8488d586cda9b644aae713626ae46c4, type: 2}
   subgrabHighlight: {fileID: 2100000, guid: 61333ff32966ca74583e3dbb5c4bdd29, type: 2}
-  leftHandRender: {fileID: 2100000, guid: cc8c9e8a516866042b69a6919d0ab885, type: 2}
-  rightHandRender: {fileID: 2100000, guid: cc8c9e8a516866042b69a6919d0ab885, type: 2}
+  handRender: {fileID: 2100000, guid: 4ed1dc8e0dff19345b21b19b2368ea2b, type: 2}
   currentCollisions: []
 --- !u!135 &496450765
 SphereCollider:
@@ -14111,8 +14110,7 @@ MonoBehaviour:
   otherHand: {fileID: 496450762}
   grabHighlight: {fileID: 2100000, guid: a8488d586cda9b644aae713626ae46c4, type: 2}
   subgrabHighlight: {fileID: 2100000, guid: 61333ff32966ca74583e3dbb5c4bdd29, type: 2}
-  leftHandRender: {fileID: 2100000, guid: cc8c9e8a516866042b69a6919d0ab885, type: 2}
-  rightHandRender: {fileID: 2100000, guid: cc8c9e8a516866042b69a6919d0ab885, type: 2}
+  handRender: {fileID: 2100000, guid: 4ed1dc8e0dff19345b21b19b2368ea2b, type: 2}
   currentCollisions: []
 --- !u!135 &1609998913
 SphereCollider:
@@ -14357,7 +14355,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403533a9775636248935f7c3ef1cf354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 36644306}
+  spawner: {fileID: 36644307}
+  livesRemaining: 3
   items: {fileID: 644696115}
   lives: {fileID: 1068390243}
   grade: {fileID: 1806524068}
@@ -16454,7 +16453,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 1000
 --- !u!222 &1806524069
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16479,7 +16478,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -427.00003, y: -5.999996}
+  m_AnchoredPosition: {x: -442, y: -5.999996}
   m_SizeDelta: {x: 900, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1808983240

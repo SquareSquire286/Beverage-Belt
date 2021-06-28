@@ -7,8 +7,9 @@ using UnityEngine.SceneManagement;
 public class ClassicGameManager : MonoBehaviour
 {
     private float score;
-    public GameObject spawner;
-    private int itemsHandled, livesRemaining;
+    public ObjectSpawner spawner;
+    private int itemsHandled;
+    public int livesRemaining;
     public Text items, lives, grade;
     public AudioSource success, error;
     public List<GameObject> beltComponents;
@@ -16,7 +17,6 @@ public class ClassicGameManager : MonoBehaviour
     void Start()
     {
         score = 0;
-        livesRemaining = 3;
         itemsHandled = 0;
     }
 
@@ -26,26 +26,18 @@ public class ClassicGameManager : MonoBehaviour
         lives.text = "Errors Remaining: " + livesRemaining;
         items.text = "Items Handled: " + itemsHandled;
 
-        if (itemsHandled > 0) // prevents divide by zero error
-        {
-            Color colour = Color.Lerp(Color.red, Color.green, score / itemsHandled);
-            grade.color = colour;
-            float percentage = (score / itemsHandled) * 100;
-            percentage = (float)System.Math.Round(percentage, 0);
-            grade.text = score + "/" + itemsHandled + " = " + percentage + "%";
-        }
+        grade.color = Color.Lerp(Color.red, Color.green, score / 1000f);
 
-        else
-        {
-            grade.color = Color.red;
-            grade.text = "0/0 = 0%";
-        }
+        if (itemsHandled > 0)
+            grade.text = "$" + (score / 100f).ToString("0.00");
+
+        else grade.text = "$0.00";
     }
 
     public void Error()
     {
         livesRemaining--;
-        spawner.GetComponent<ObjectSpawner>().ReduceLives();
+        spawner.ReduceLives();
         itemsHandled++;
         error.Play();
 
@@ -74,9 +66,9 @@ public class ClassicGameManager : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    public void Success()
+    public void Success(int points)
     {
-        score++;
+        score += points;
         itemsHandled++;
         success.Play();
     }

@@ -8,7 +8,7 @@ public class InteractionModule : MonoBehaviour
     public string hand;
     public GameObject grabbedObject, otherHand;
     private GameObject rightHandModel, leftHandModel;
-    public Material grabHighlight, subgrabHighlight, leftHandRender, rightHandRender;
+    public Material grabHighlight, subgrabHighlight, handRender;
     private Vector3 previousPos;
     private Quaternion previousRot;
     public List<GameObject> currentCollisions;
@@ -23,10 +23,16 @@ public class InteractionModule : MonoBehaviour
     void Update()
     {
         if (leftHandModel == null)
+        {
             leftHandModel = GameObject.Find("hand_left");
+            leftHandModel.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = handRender;
+        }
 
         if (rightHandModel == null)
+        {
             rightHandModel = GameObject.Find("hand_right");
+            rightHandModel.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = handRender;
+        }
 
         if ((!OVRInput.Get(OVRInput.RawButton.LHandTrigger) && hand == "Left") || (!OVRInput.Get(OVRInput.RawButton.RHandTrigger) && hand == "Right"))
         {
@@ -41,7 +47,6 @@ public class InteractionModule : MonoBehaviour
                 rb.velocity = velocity;
                 rb.angularVelocity = angularVelocity;
                 grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
-                Debug.Log(velocity);
                 previousPos = transform.position;
                 previousRot = transform.rotation;
             }
@@ -94,13 +99,23 @@ public class InteractionModule : MonoBehaviour
                 else if (obj.layer == 11)
                 {
                     if (obj.GetComponent<StartButton>() != null)
+                    {
                         obj.GetComponent<StartButton>().Press();
+                        obj.layer = 0;
+                        currentCollisions.Remove(obj);
+                        break;
+                    }
 
-                    else obj.GetComponent<MenuButton>().Press();
-
-                    obj.layer = 0;
-                    currentCollisions.Remove(obj);
-                    break;
+                    else if (obj.GetComponent<MenuButton>() != null) // this should resolve a bug wherein the menu button would be inadvertently pressed when attempting to remove a cap or pop tab
+                    {
+                        if (grabbedObject == null && otherHand.GetComponent<InteractionModule>().grabbedObject == null)
+                        {
+                            obj.GetComponent<MenuButton>().Press();
+                            obj.layer = 0;
+                            currentCollisions.Remove(obj);
+                            break;
+                        }
+                    }
                 }
             }
         }

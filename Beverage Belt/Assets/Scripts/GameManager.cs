@@ -34,10 +34,10 @@ public class GameManager : MonoBehaviour
         if (timerStarted)
         {
             if (itemsRemaining > 0 || sceneName == "FreePlay")
-                time.text = "Time: " + string.Format("{0:0}", Mathf.FloorToInt((Time.time - startTime) / 3600)) + ":" + string.Format("{0:00}", Mathf.FloorToInt((Time.time - startTime) / 60)) + ":" + string.Format("{0:00.000}", (float)System.Math.Round((Time.time - startTime) % 60, 3));
+                time.text = "Time: " + string.Format("{0:00}", Mathf.FloorToInt((Time.time - startTime) / 60)) + ":" + string.Format("{0:00.000}", (float)System.Math.Round((Time.time - startTime) % 60, 3));
         }
 
-        else time.text = "Time: 0:00:00.000";
+        else time.text = "Time: 00:00.000";
 
         //timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 

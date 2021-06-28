@@ -7480,8 +7480,7 @@ MonoBehaviour:
   otherHand: {fileID: 1493928897}
   grabHighlight: {fileID: 2100000, guid: a8488d586cda9b644aae713626ae46c4, type: 2}
   subgrabHighlight: {fileID: 2100000, guid: 61333ff32966ca74583e3dbb5c4bdd29, type: 2}
-  leftHandRender: {fileID: 2100000, guid: cc8c9e8a516866042b69a6919d0ab885, type: 2}
-  rightHandRender: {fileID: 2100000, guid: cc8c9e8a516866042b69a6919d0ab885, type: 2}
+  handRender: {fileID: 2100000, guid: 4ed1dc8e0dff19345b21b19b2368ea2b, type: 2}
   currentCollisions: []
 --- !u!135 &935590694
 SphereCollider:
@@ -12113,8 +12112,7 @@ MonoBehaviour:
   otherHand: {fileID: 935590691}
   grabHighlight: {fileID: 2100000, guid: a8488d586cda9b644aae713626ae46c4, type: 2}
   subgrabHighlight: {fileID: 2100000, guid: 61333ff32966ca74583e3dbb5c4bdd29, type: 2}
-  leftHandRender: {fileID: 2100000, guid: cc8c9e8a516866042b69a6919d0ab885, type: 2}
-  rightHandRender: {fileID: 2100000, guid: cc8c9e8a516866042b69a6919d0ab885, type: 2}
+  handRender: {fileID: 2100000, guid: 4ed1dc8e0dff19345b21b19b2368ea2b, type: 2}
   currentCollisions: []
 --- !u!135 &1493928899
 SphereCollider:
@@ -13534,9 +13532,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1634542866}
-  - component: {fileID: 1634542865}
   - component: {fileID: 1634542868}
   - component: {fileID: 1634542867}
+  - component: {fileID: 1634542865}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -13553,20 +13551,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1634542864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cd0c4f0d5bee845a9f61f1c2260545, type: 3}
+  m_Script: {fileID: 11500000, guid: 403533a9775636248935f7c3ef1cf354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 27681006}
+  spawner: {fileID: 27681007}
+  livesRemaining: 1
   items: {fileID: 398957722}
   lives: {fileID: 1880252684}
   grade: {fileID: 1908363852}
   success: {fileID: 1634542868}
   error: {fileID: 1634542867}
   beltComponents:
-  - {fileID: 916560734}
-  - {fileID: 534720643}
-  - {fileID: 840727003}
   - {fileID: 1501210412}
+  - {fileID: 916560734}
+  - {fileID: 840727003}
+  - {fileID: 534720643}
 --- !u!4 &1634542866
 Transform:
   m_ObjectHideFlags: 0
@@ -16205,7 +16204,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -427.00003, y: -5.999996}
+  m_AnchoredPosition: {x: -442, y: -5.999996}
   m_SizeDelta: {x: 900, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1912663404
@@ -16322,7 +16321,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -223, y: -5.999996}
+  m_AnchoredPosition: {x: -242, y: -5.999996}
   m_SizeDelta: {x: 900, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1918508005

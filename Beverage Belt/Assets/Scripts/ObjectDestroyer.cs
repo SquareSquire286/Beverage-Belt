@@ -6,7 +6,7 @@ public class ObjectDestroyer : MonoBehaviour
 {
     public GameObject leftHand, rightHand, gameManager, spawner;
     [SerializeField] int destroyID;
-    private int thisObjID;
+    private int thisObjID, thisObjPointTotal;
     private bool lidRemoved;
 
     void OnTriggerEnter(Collider col)
@@ -16,6 +16,7 @@ public class ObjectDestroyer : MonoBehaviour
             col.gameObject.layer = 0; // prevent the player from grabbing the object after it has been placed in the destroy queue
             col.gameObject.GetComponent<Collider>().enabled = false;
             thisObjID = col.gameObject.GetComponent<GrabbableObject>().GetObjectID();
+            thisObjPointTotal = col.gameObject.GetComponent<GrabbableObject>().GetPointValue();
 
             if (col.gameObject.GetComponent<RemovableObjectHolder>() != null && col.gameObject.GetComponent<RemovableObjectHolder>().GetObjectStatus())
                 lidRemoved = false;
@@ -25,11 +26,11 @@ public class ObjectDestroyer : MonoBehaviour
             spawner.GetComponent<ObjectSpawner>().DestroyGrabbedObject(col.gameObject);
             Destroy(col.gameObject);
 
-            this.UpdateGameManager();
+            this.UpdateGameManager(thisObjPointTotal);
         }
     }
 
-    void UpdateGameManager()
+    void UpdateGameManager(int pointsToAdd)
     {
         if (gameManager.GetComponent<GameManager>() != null)
         {
@@ -50,15 +51,7 @@ public class ObjectDestroyer : MonoBehaviour
             if (destroyID == 6 || destroyID != thisObjID || (destroyID == thisObjID && !lidRemoved))
                 gameManager.GetComponent<ClassicGameManager>().Error();
 
-            else gameManager.GetComponent<ClassicGameManager>().Success();
-        }
-
-        else if (gameManager.GetComponent<SurvivalGameManager>() != null)
-        {
-            if (destroyID == 6 || destroyID != thisObjID || (destroyID == thisObjID && !lidRemoved))
-                gameManager.GetComponent<SurvivalGameManager>().Error();
-
-            else gameManager.GetComponent<SurvivalGameManager>().Success();
+            else gameManager.GetComponent<ClassicGameManager>().Success(pointsToAdd);
         }
 
         else if (gameManager.GetComponent<FrenzyGameManager>() != null)

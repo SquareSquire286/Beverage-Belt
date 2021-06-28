@@ -14126,8 +14126,7 @@ MonoBehaviour:
   otherHand: {fileID: 1831057892}
   grabHighlight: {fileID: 2100000, guid: a8488d586cda9b644aae713626ae46c4, type: 2}
   subgrabHighlight: {fileID: 2100000, guid: 61333ff32966ca74583e3dbb5c4bdd29, type: 2}
-  leftHandRender: {fileID: 2100000, guid: cc8c9e8a516866042b69a6919d0ab885, type: 2}
-  rightHandRender: {fileID: 2100000, guid: cc8c9e8a516866042b69a6919d0ab885, type: 2}
+  handRender: {fileID: 2100000, guid: 4ed1dc8e0dff19345b21b19b2368ea2b, type: 2}
   currentCollisions: []
 --- !u!135 &1520888105
 SphereCollider:
@@ -15508,8 +15507,7 @@ MonoBehaviour:
   otherHand: {fileID: 1520888102}
   grabHighlight: {fileID: 2100000, guid: a8488d586cda9b644aae713626ae46c4, type: 2}
   subgrabHighlight: {fileID: 2100000, guid: 61333ff32966ca74583e3dbb5c4bdd29, type: 2}
-  leftHandRender: {fileID: 2100000, guid: cc8c9e8a516866042b69a6919d0ab885, type: 2}
-  rightHandRender: {fileID: 2100000, guid: cc8c9e8a516866042b69a6919d0ab885, type: 2}
+  handRender: {fileID: 2100000, guid: 4ed1dc8e0dff19345b21b19b2368ea2b, type: 2}
   currentCollisions: []
 --- !u!135 &1831057894
 SphereCollider:

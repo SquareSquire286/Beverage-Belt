@@ -4151,7 +4151,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: FREE PLAY
+  m_Text: TRAINING
 --- !u!222 &480159182
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5444,6 +5444,7 @@ GameObject:
   - component: {fileID: 699560116}
   - component: {fileID: 699560117}
   - component: {fileID: 699560115}
+  - component: {fileID: 699560118}
   m_Layer: 0
   m_Name: RightHandAnchor
   m_TagString: Untagged
@@ -5597,6 +5598,25 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &699560118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699560113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4367afa9a43cc8e4e97e036e2db52d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hand: Right
+  grabbedObject: {fileID: 0}
+  otherHand: {fileID: 1909023212}
+  grabHighlight: {fileID: 2100000, guid: a8488d586cda9b644aae713626ae46c4, type: 2}
+  subgrabHighlight: {fileID: 2100000, guid: 61333ff32966ca74583e3dbb5c4bdd29, type: 2}
+  handRender: {fileID: 2100000, guid: 4ed1dc8e0dff19345b21b19b2368ea2b, type: 2}
+  currentCollisions: []
 --- !u!1001 &705124327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16529,6 +16549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1909023215}
   - component: {fileID: 1909023214}
+  - component: {fileID: 1909023213}
   m_Layer: 0
   m_Name: LeftHandAnchor
   m_TagString: Untagged
@@ -16536,6 +16557,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1909023213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909023212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4367afa9a43cc8e4e97e036e2db52d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hand: Left
+  grabbedObject: {fileID: 0}
+  otherHand: {fileID: 699560113}
+  grabHighlight: {fileID: 2100000, guid: a8488d586cda9b644aae713626ae46c4, type: 2}
+  subgrabHighlight: {fileID: 2100000, guid: 61333ff32966ca74583e3dbb5c4bdd29, type: 2}
+  handRender: {fileID: 2100000, guid: 4ed1dc8e0dff19345b21b19b2368ea2b, type: 2}
+  currentCollisions: []
 --- !u!135 &1909023214
 SphereCollider:
   m_ObjectHideFlags: 0
