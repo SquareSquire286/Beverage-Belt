@@ -1,7 +1,6 @@
 # Beverage Belt: VR Recycling Sorting Simulation
 
 ![Beverage Belt Logo](Docs/Logo.png)
-![Beverage Belt Teaser](Docs/ConveyorBelt.png)
 
 ## Overview
 
@@ -20,6 +19,8 @@ This project was developed to explore how virtual reality could simulate conveyo
 The system was designed with potential real-world training applications in mind, such as recycling depots and sorting facilities, where new employees must learn how to quickly identify, prepare, and sort items while following specific quality-control rules.
 
 By simulating these workflows in VR, new employees could be trained without risk of injury, equipment damage, or workflow disruption.
+
+This project was a **solo endeavour**.
 
 ---
 
@@ -111,22 +112,6 @@ Key technical features include:
 
 ---
 
-## My Contributions
-
-My work on this project included:
-
-- Overall gameplay systems architecture
-- Conveyor belt and object spawning systems
-- Sorting validation and quality-control logic
-- Game mode system implementation
-- Scoring and error tracking systems
-- VR interaction programming
-- Performance optimization
-- UI and menu system implementation
-- System balancing and difficulty tuning
-
----
-
 ## Development and Iteration
 
 The system was developed iteratively with multiple updates that introduced:
@@ -143,9 +128,13 @@ This iterative development process helped refine both gameplay balance and syste
 
 ---
 
-## Screenshots / Video
+## Screenshots
 
-(Insert screenshots and gameplay video here)
+![Beverage Belt Teaser](Docs/ConveyorBelt.png)
+
+![Beverage Belt 3](Docs/RecyclingSorting.png)
+
+![Beverage Belt 2](Docs/GameplayLogic.png)
 
 ---
 
