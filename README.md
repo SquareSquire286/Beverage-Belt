@@ -1,4 +1,4 @@
-# Beverage Belt: VR Recycling Sorting Simulation
+# Beverage Belt: A Serious VR Game About Recycling and Sorting
 
 ![Beverage Belt Logo](Docs/Logo.png)
 
