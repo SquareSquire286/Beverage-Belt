@@ -1,5 +1,6 @@
 # Beverage Belt: VR Recycling Sorting Simulation
 
+![Beverage Belt Logo](Docs/Logo.png)
 ![Beverage Belt Teaser](Docs/ConveyorBelt.png)
 
 ## Overview
