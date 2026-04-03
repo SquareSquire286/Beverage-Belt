@@ -36,6 +36,7 @@ The core gameplay loop consists of:
 4. The player sorts containers into the correct bins:
    - Milk cartons
    - Beer bottles
+   - Coloured plastic bottles (no caps permitted)
    - Clear plastic bottles (no caps permitted)
    - Aluminum cans (no tabs permitted)
 5. The player earns money for correct sorting and receives errors for mistakes
