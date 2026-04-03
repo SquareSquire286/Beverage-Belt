@@ -128,6 +128,22 @@ This iterative development process helped refine both gameplay balance and syste
 
 ---
 
+## Systems Design and Balancing
+
+A significant portion of development focused on gameplay balancing and system tuning.  
+Spawn rates, conveyor speeds, scoring systems, and error penalties were iteratively adjusted to create different difficulty curves across game modes.
+
+For example:
+- Spawn delay functions were tuned to gradually increase difficulty
+- Conveyor speed was adjusted to match item spawn rates
+- Scoring was redesigned from a flat point system to a variable-value money system
+- Physical layout changes were made to prevent unintended player strategies
+- Different game modes were balanced around accuracy, endurance, or speed
+
+As such, this process involved designing and tuning interconnected systems rather than implementing isolated mechanics.
+
+---
+
 ## Screenshots
 
 ![Beverage Belt Teaser](Docs/ConveyorBelt.png)
